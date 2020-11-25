@@ -1,4 +1,4 @@
-local paste = "https://github.com/HAAAAAAAAAAAAAAAANS/swearz/edit/main/words"
+local paste = "https://raw.githubusercontent.com/HAAAAAAAAAAAAAAAANS/swearz/main/words"
 local message = "GIRLS HMU ON DISCOURD @ fraud 7777, CMD-X ON TOP JOIN discourd.gg/exe"
 if not game:IsLoaded() then game.Loaded:wait() end
 
