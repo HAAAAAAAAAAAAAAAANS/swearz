@@ -1,1 +1,54 @@
-{"nigger":"ni󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀕gg󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀕er ","horny":"h󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀕 o󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀕 rn󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀕 y","sex":"s󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀕 ex","cum":"c󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀕 um","shit":"shi󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀕 t""cunt":"cu󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀘󠀕󠀖󠀗󠀕 nt"}
+local paste = "https://github.com/HAAAAAAAAAAAAAAAANS/swearz/edit/main/words"
+local message = "GIRLS HMU ON DISCOURD @ fraud 7777, CMD-X ON TOP JOIN discourd.gg/exe"
+if not game:IsLoaded() then game.Loaded:wait() end
+
+local rand = Random.new()
+local plr = game:GetService("Players").LocalPlayer
+local event = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+
+local function newserver()
+    syn.queue_on_teleport("loadstring(game:HttpGetAsync(\""..paste.."\"))()")
+
+    local servers = {}
+    for _ = 1,100 do
+        for _ = 1,3 do
+            local decode = game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100&cursor="))
+            if decode.nextPageCursor ~= nil then
+                decode = game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100&cursor="..decode.nextPageCursor))
+                for _,server in pairs(decode.data) do
+                    if server.maxPlayers ~= server.playing then
+                        servers[#servers+1] = server.id
+                    end
+                end
+            else
+                for _,server in pairs(decode.data) do
+                    if server.maxPlayers ~= server.playing then
+                        servers[#servers+1] = server.id
+                    end
+                end
+                break
+            end
+        end
+        coroutine.wrap(function()
+            game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, servers[rand:NextInteger(1,#servers)], plr)
+        end)()
+        wait(6.66)
+    end
+end
+
+wait(2)
+for _ = 1,7 do
+    event:FireServer(message, "All")
+end
+pcall(function() game:GetService("Players").LocalPlayer.Character.Humanoid:MoveTo(game:GetService("Players"):GetPlayers()[math.random(2,#game:GetService("Players"):GetPlayers())].Character.HumanoidRootPart.Position) end)
+wait(5)
+for _,p in pairs(game:GetService("Players"):GetPlayers()) do
+    if p ~= plr then
+        for _ = 1,7 do
+            event:FireServer("/w "..p.Name.." "..message, "All")
+        end
+    end
+end
+pcall(function() game:GetService("Players").LocalPlayer.Character.Humanoid:MoveTo(game:GetService("Players"):GetPlayers()[math.random(2,#game:GetService("Players"):GetPlayers())].Character.HumanoidRootPart.Position) end)
+wait(4)
+newserver()
