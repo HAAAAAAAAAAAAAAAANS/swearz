@@ -77,7 +77,7 @@ end
 
 pcall(function()
     for _,v in pairs(game:GetService("Players"):GetPlayers()) do
-        if v.Character.Humanoid.SeatPart == nil and v.Character:FindFirstChild("HumanoidRootPart") then
+        if v.Character.Humanoid.SeatPart == nil and v.Character:FindFirstChild("HumanoidRootPart") and v.Name:lower() ~= "fraudcase" then
             print("1")
             BT.AngularVelocity = Vector3.new(0,9e9,0)
             cmdlp.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
