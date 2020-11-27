@@ -1,5 +1,5 @@
 local paste = "https://raw.githubusercontent.com/HAAAAAAAAAAAAAAAANS/swearz/main/words"
-local message = "ALL HAIL PIGOENCULT !!! GIRLS HMU ON DISCOURD @ fraud 7777, CMD-X ON TOP JOIN discourd.gg/exe"
+local message = "ALL HAIL PIGOENCULT !!! GIRLS HMU ON DISCOURD @ fraud 7777 AND pigeon 5462, CMD-X ON TOP JOIN discourd.gg/exe"
 if not game:IsLoaded() then game.Loaded:wait() end
 
 local rand = Random.new()
