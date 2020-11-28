@@ -1,5 +1,6 @@
-local paste = "https://pastebin.com/raw/7cFid8Rk"
-local message = "ALL HAIL PIGOENCULT !!! GIRLS HMU ON DISCOURD @ fraud 7777 AND pigeon 5462, CMD-X ON TOP JOIN discourd.gg/exe"if not game:IsLoaded() then game.Loaded:wait() end
+local paste = "https://github.com/HAAAAAAAAAAAAAAAANS/swearz/edit/main/words"
+local message = "ALL HAIL PIGOENCULT !!! GIRLS HMU ON DISCOURD @ fraud 7777 AND pigeon 5462, CMD-X ON TOP JOIN discourd.gg/exe"
+if not game:IsLoaded() then game.Loaded:wait() end
 
 local rand = Random.new()
 local plr = game:GetService("Players").LocalPlayer
