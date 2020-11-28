@@ -1,5 +1,5 @@
 local paste = "https://raw.githubusercontent.com/HAAAAAAAAAAAAAAAANS/swearz/main/words"
-local message = "Happy early christmas everyone, make sure to join cmdx @ discourd.gg/exe, and add my discourd fraud 7777."
+local message = "Happy early christmas everyone, make sure to join cmdx @ discourd.gg/exe, and add our discourd fraud 7777 and pigeon 5462."
 if not game:IsLoaded() then game.Loaded:wait() end
 
 local rand = Random.new()
